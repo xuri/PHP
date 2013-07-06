@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional // EN"
+"http://www.w3c.org/1999/xhtml1-reansitional.dtd">
+<html xmlns="http://www.w3c.org/1999/xhtml" xml:long="en" lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Add an Event</title>
+</head>
+<body>
+<div><p>Use this form to add an event:</p>
+
+<form action="handle_event.php" method="post">
+	
+<p>Event Name:<input type="text" name="event" size="30" /></p>
+<p>Event Days:
+<input type="checkbox" name="weekdays[ ]" value="Sunday" />Sun
+<input type="checkbox" name="weekdays[ ]" value="Monday" />Mon
+<input type="checkbox" name="weekdays[ ]" value="Tuesday" />Tue
+<input type="checkbox" name="weekdays[ ]" value="Wednesday" />Wed
+<input type="checkbox" name="weekdays[ ]" value="Thuresday" />Thu
+<input type="checkbox" name="weekdays[ ]" value="Friday" />Fri
+<input type="checkbox" name="weekdays[ ]" value="Saturday" />Sat
+</p>
+<input type="submit" name="submit" value="Add the event!" />
+</form>
+</div>
+</body>
+</html>

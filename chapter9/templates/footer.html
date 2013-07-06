@@ -1,0 +1,27 @@
+<!--END CHANGEABLE CONTENT. -->
+<!-- Script 8.3 - footer.html -->
+</div>
+
+<div id="rightcontent">
+	<h1>Navigation</h1>
+	<p>
+	<a href="index.php">Home</a><br />
+	<a href="albums.php">Discography</a><br />
+	<a href="login.php">Login</a><br />
+	<a href="register.php">Register</a></p>
+
+	<p><em><?php //Print the current date and time:
+	//Set the timezone:
+	date_default_timezone_set('America/New_York');
+
+
+	// Now print the date and time:
+	print date('g:i al F j');
+	?></em><p>
+</div>
+</body>
+</html><?php //Script 8.12 - footer.html #3
+
+//Send the buffer to the browser and turn off buffering:
+ob_end_flush();
+?>
