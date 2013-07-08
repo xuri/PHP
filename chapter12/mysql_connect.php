@@ -14,6 +14,14 @@ if ($dbc = @mysql_connect('localhost', 'root', 'password')) {
 
 	print '<p>Successfully connected to MySQL!</p>';
 
+	// try to create the database:
+	if (@mysql_query('CREATE DATABASE myblog')) {
+
+		print '<p>The database has been created!</p>';
+
+	} else // Cloud not creat it.
+		print '<p style="color: red;">Cloud not create the database because:<br />' . mysql_error() . '.</p>';
+
 	mysql_close(); // Close the connection.
 
 } else {
