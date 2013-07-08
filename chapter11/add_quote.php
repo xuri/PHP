@@ -26,8 +26,6 @@ if (isset($_POST['submitted'])){ // Handle form.
 
 			fwrite($fp, "{$_POST['quote']}\n"); // Write the data. Use \r\n on Windows.
 			flock($fp, LOCK_UN); // Unlock.
-			fwrite($fp, "{$_POST['quote']}\n"); // Write the data. Use \r\n on Windows.
-
 			fclose($fp); // Close the file.
 
 			// Print a message:
