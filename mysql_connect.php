@@ -6,11 +6,11 @@
 	<title>Connect to MySQL</title>
 </head>
 <body>
-<?php // Script 12.1 - mysql_connect.php
+<?php // Script 12.2 - mysql_connect.php #2
 /* This script connects to the MySQL server. */
 
 // Attempt to connect to MySQL and print out messages:
-if ($dbc = mysql_connect('localhost', 'root', 'password')) {
+if ($dbc = @mysql_connect('localhost', 'root', 'password')) {
 
 	print '<p>Successfully connected to MySQL!</p>';
 
@@ -18,7 +18,7 @@ if ($dbc = mysql_connect('localhost', 'root', 'password')) {
 
 } else {
 
-	print '<p style="color: red; ">Could not connect to MySQL.</p>';
+	print '<p style="color: red; ">Could not connect to MySQL:<br />' . mysql_error() . '.</p>';
 
 }
 
