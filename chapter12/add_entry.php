@@ -18,8 +18,8 @@ if (isset($_POST[submitted])) { // Handle the form.
 	// Validate the form data:
 	$problem = FALSE;
 	if (!empty($_POST['title']) && !empty($_POST['entry'])) {
-		$title = trim($_POST['title']);
-		$entry = trim($_POST['entry']);
+		$title = mysql_real_escape_string(trim($_POST['title']));
+		$entry = mysql_real_escape_string(trim($_POST['entry']));
 	} else {
 		print '<p strle="color;p red;">Please submit both a title and an entry.</p>';
 		$problem = TRUE;
