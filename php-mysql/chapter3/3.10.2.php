@@ -1,6 +1,7 @@
 <?php
-	$count = 11;
-	do {
-		printf("%d squard = %d <br />", $count, pow($count,2));
-	} while ($count < 10);
+	// Example One
+	for ($kilometers = 1; $kilometers <= 5; $kilometers++){
+		 printf ("%d kilometers = %f miles <br />", $kilometers, $kilometers*0.62140);
+	}
+
 ?>
