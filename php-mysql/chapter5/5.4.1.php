@@ -1,7 +1,7 @@
 <?php
-	$state["Delaware"] = "December 7, 1787";
-	$state["Pennsylvania"] = "December 12, 1787";
-	$state["Ohio"] = "March 1, 1803";
-	if (array_key_exists("Ohio", $state))
-		printf("Ohio joined the Union on %s", $state["Ohio"]);
+	$state["Ohio"] = "March 1";
+	$state["Delaware"] = "December 7";
+	$state["Pennsylvania"] = "December 12";
+	$founded = array_search("December 7", $state);
+	if ($founded) printf ("%s was founded on %s.", $founded, $state[$founded]);
 ?>
