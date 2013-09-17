@@ -3,7 +3,9 @@
 	sort($grades);
 	print_r($grades);
 	print '<hr/>';
-	$states = array("OH" => "Ohio", "CA" => "California", "MD" => "Maryland");
-	sort($states);
+	$states[0] = "Delaware";
+	$states[1] = "Pennsylvania";
+	$states[2] = "New Jersey";
+	asort($states);
 	print_r($states);
 ?>
