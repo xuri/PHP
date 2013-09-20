@@ -1,5 +1,5 @@
 <?php
-	$states = array("Ohio","Florida","Massachusetts","Montana");
-	rsort($states);
+	$states = array("Delaware","Pennsylvania","New Jersey");
+	arsort($states);
 	print_r($states);
 ?>
