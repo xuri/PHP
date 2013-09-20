@@ -3,4 +3,8 @@
 	// ahuffle the cards
 	shuffle($cards);
 	print_r($cards);
+
+	$grades = array(42, "hello", 42);
+	$total = array_sum($grades);
+	print $total;
 ?>
