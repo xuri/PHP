@@ -1,10 +1,12 @@
 <?php
 	class Employee{
 		var $name;
-		// Other field and method declarations follow...
+		function __set($propName, $propValue)
+		{
+			echo "Nonexistent variable: \$$propName!";
+		}
 	}
 	$employee = new Employee();
-	$employee->name = "Mary Swanson";
-	$name = $employee->name;
-	echo "New employee: $name";
+	$employee->name = "Mario";
+	$employee->title = "Executive Chef";
 ?>
