@@ -1,32 +1,22 @@
 <?php
-	class Book
+	class Employee
 	{
-		private $title;
-		private $isbn;
-		private $copies;
-
-		public function __construct($isbn)
+		protected $name;
+		protected $title;
+		function __construct()
 		{
-			$this->setIsbn($isbn);
-			$this->getTitle();
-			$this->getNumberCopies();
-		}
-
-		public function setIsbn($isbn)
-		{
-			$this->isbn = $isbn;
-		}
-
-		public function getTitle(){
-			$this->title = "Reginning Python";
-			print "Title: ".$this->title."<br />";
-		}
-
-		public function getNumberCopies(){
-			$this->copies = "5";
-			print "Number copies available: ".$this->copies."<br />";
+			echo "<p>Staff constructor called!</p>";
 		}
 	}
 
-	$book = new book("159059519X");
+	class Manager extends Employee
+	{
+		function __construct()
+		{
+			parent::__construct();
+			echo "<p>Manager constructor called!</p>";
+		}
+	}
+
+	$employee - new Manager();
 ?>
