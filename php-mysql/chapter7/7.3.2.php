@@ -15,9 +15,9 @@
 		function getName() {
 			return "My name is ".$this->name."<br />";
 		}
-
-		function __construct($name) {
-		$this->setName($name);
+	
+		function __construct() {
+			echo "<p>CEO object created!</p>";
 		}
 	} // end Employee class
 
