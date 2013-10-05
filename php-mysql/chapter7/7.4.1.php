@@ -20,22 +20,26 @@
 			echo "<p>CEO object created!</p>";
 		}
 	} // end Employee class
+	
+	interface IPillage
+	{
+		function emptyBankAccount();
+		function burnDocuments();
 
-	//Definr an Executive class that inherits from Employee
-	class Executive extends Employee {
-
-		// Define a method unique to Employee
-		function pillageCompany() {
-			echo "i'm selling company assets to finance my yacht!";
-		}
-	} // end Executive class
-
-	class CEO extends Executive {
-		function getFacelift() {
-			echo "nip nip tuck tuck";
-		}
 	}
 
-	$ceo = new CEO("Dennis");
-	echo $ceo->getName();
+	class Executive extends Employee implements IPillage
+	{
+		private $totalStockOptions;
+
+		function emptyBankAccount()
+		{
+			echo "Call CFO and ask to transfer funds to Swiss bank account.";
+		}
+
+		function burnDocuments()
+		{
+			echo "Torch the office suite.";
+		}
+	}
 ?>
