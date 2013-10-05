@@ -20,7 +20,7 @@
 			echo "<p>CEO object created!</p>";
 		}
 	} // end Employee class
-	
+
 	interface IPillage
 	{
 		function emptyBankAccount();
@@ -28,18 +28,21 @@
 
 	}
 
-	class Executive extends Employee implements IPillage
+	class Assistant extends Employee implements IPillage
 	{
-		private $totalStockOptions;
+		function takeMemo()
+		{
+			echo "Taking memo...";
+		}
 
 		function emptyBankAccount()
 		{
-			echo "Call CFO and ask to transfer funds to Swiss bank account.";
+			echo "Go on shopping spree with office credit card.";
 		}
 
 		function burnDocuments()
 		{
-			echo "Torch the office suite.";
+			echo "Start small fire in the trash can.";
 		}
 	}
 ?>
