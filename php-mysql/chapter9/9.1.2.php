@@ -21,4 +21,11 @@
 	echo "<br />";
 	echo $regs[3];		// outputs "com"
 
+	echo "<br /><hr />";
+
+	$pswd = "jasonaf";
+	if (!eregi("^[a-zA-Z0-0]{8,10}$",$pswd))
+		echo "Invalid password!";
+	else 
+		echo "Valid password!";
 ?>
