@@ -4,7 +4,13 @@
 	print_r($food);
 
 	echo "<hr />";
-	
+
 	$line = "vim is the greatest word processor ever created!";
 	if (preg_match("/\bVim\b/i", $line, $match)) print "Match found!";
+
+	echo "<hr />";
+
+	$userinfo = "Name :<b>Zeev Suraski</b> <br> Title: <b>PHP Guru</b>";
+	preg_match_all("/<b>(.*)<\/b>/U", $userinfo, $pat_array);
+	printf("%s <br /> %s", $pat_array[0][0],$pat_array[0][1]);
 ?>
