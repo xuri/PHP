@@ -41,4 +41,9 @@
 						"<a href=\"\\0\">\\0</a>",$url);
 	echo $url;
 	// Displays Apress (<a href="http://www.apress.com">http://www.apress.com</a>)
+
+	echo "<br /><hr />";
+
+	$text2 = "This is \tsome text that\nwe might like to parse.";
+	print_r(split("[\n\t]", $text2));
 ?>
