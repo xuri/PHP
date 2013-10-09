@@ -54,4 +54,10 @@
 		$newtext = preg_replace_callback("/<acronym>(.*)<\/acronym>/U", 'acronym', $text3);
 
 		print_r($newtext);
+
+	echo "<hr />";
+
+	$delinitedText = "Jason+++Gilmore+++++++++++++Columbus+++OH";
+	$fields = preg_split("/\+{1,}/", $delinitedText);
+	foreach ($fields as $field) echo $field . "<br />";
 ?>
