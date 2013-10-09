@@ -31,6 +31,11 @@
 
 	echo "<br /><hr />";
 
+	$text = "This is a link to http://www.mrxuri.com/.";
+	echo ereg_replace("http://([a-zA-z0-9./-]+)$", "<a href=\"\\0\">\\0</a>", $text);
+
+	echo "<br /><hr />";
+
 	$url = "Apress (http://www.apress.com)";
 	$url = ereg_replace("http://([a-zA-Z0-9./-]+)([a-zA-Z/]+)",
 						"<a href=\"\\0\">\\0</a>",$url);
