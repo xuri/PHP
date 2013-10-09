@@ -18,4 +18,9 @@
 
 	$text = "Tickets for the bout are going for $500.";
 	echo preg_quote($text);
+
+	echo "<hr />";
+
+	$text1 = "This is a link to http://www.mrxuri.com/.";
+	echo preg_replace("/http:\/\/(.*)\//", "<a href=\"\${0}\">\${0}</a>", $text1);
 ?>
