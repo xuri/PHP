@@ -23,4 +23,11 @@
 
 	$text1 = "This is a link to http://www.mrxuri.com/.";
 	echo preg_replace("/http:\/\/(.*)\//", "<a href=\"\${0}\">\${0}</a>", $text1);
+
+	echo "<hr />";
+
+	$draft = "in 2007 the company faced plummeting revenues and scandal.";
+	$keywords = array("/faced/", "/plummeting/", "/scandal/");
+	$repacements = array("celebrated", "skyrocketing", "expansion");
+	echo preg_replace($keywords, $repacements, $draft);
 ?>
