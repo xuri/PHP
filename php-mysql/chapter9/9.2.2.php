@@ -20,4 +20,11 @@
 	$password = "3312345";
 	if (strspn($password, "1234567890") == strlen($password))
 		echo "The password cannot consist solely of numbers!";
+
+	echo "<hr />";
+
+	$password1 = "a12345";
+	if (strcspn($password1, "1234567890") == 0){
+		echo "Password cannot consist soley of numbers!";
+	}
 ?>
