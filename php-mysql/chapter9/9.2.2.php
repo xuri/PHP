@@ -14,4 +14,10 @@
 
 	if (! strcasecmp($email1, $email2))
 		echo "The email adddresses are identical!";
+
+	echo "<hr />";
+
+	$password = "3312345";
+	if (strspn($password, "1234567890") == strlen($password))
+		echo "The password cannot consist solely of numbers!";
 ?>
