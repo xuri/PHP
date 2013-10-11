@@ -6,4 +6,9 @@
 
 	$msg = "I annoy people by capitalizing e-mail text.";
 	echo strtoupper($msg);
+
+	echo "<hr />";
+
+	$sentence = "the newest version of PHP was released today!";
+	echo ucfirst($sentence);
 ?>
