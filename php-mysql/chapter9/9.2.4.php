@@ -6,4 +6,15 @@
 
 	// convert the newlines to <br />'s.
 	echo nl2br($recipe);
+
+	echo "<hr />";
+
+	$input = "I just can't get <<enough>> of PHP!";
+	echo htmlspecialchars($input);
+
+	echo "<hr />";
+
+	$table = array("<b>" => "<strong>","</b>" => "</strong>");
+	$html = "<b>Today In PHP-Powerd News</b>";
+	echo strtr($html, $table);
 ?>
