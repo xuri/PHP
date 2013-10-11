@@ -11,4 +11,9 @@
 
 	$sentence = "the newest version of PHP was released today!";
 	echo ucfirst($sentence);
+
+	echo "<hr />";
+
+	$title = "0'Malley wins the heavyweight championship!";
+	echo ucwords($title);
 ?>
