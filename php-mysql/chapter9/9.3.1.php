@@ -65,4 +65,10 @@ summary2;
 		$summary2 = substr($summary2, 0, strrpos(substr($summary2, 0, $limit),
 			' ')) . '...';
 	echo $summary2;
+
+	echo "<hr />";
+
+	$author = "jason@example.com";
+	$author = str_replace("@", "(at)", $author);
+	echo "Contact the author of this article at $author.";
 ?>
