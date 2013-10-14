@@ -22,5 +22,5 @@
 
 	$input = "Email <a href='spammer@example.com'>sapmmer@example.com</a>
 			is <b>awesom</b>!";
-	echo strip_tags($input);
+	echo strip_tags($input,"<a>");
 ?>
