@@ -71,4 +71,9 @@ summary2;
 	$author = "jason@example.com";
 	$author = str_replace("@", "(at)", $author);
 	echo "Contact the author of this article at $author.";
+
+	echo "<hr />";
+
+	$car = "1994 Ford";
+	echo substr($car, 5);
 ?>
