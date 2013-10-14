@@ -76,4 +76,18 @@ summary2;
 
 	$car = "1994 Ford";
 	echo substr($car, 5);
+
+	echo "<hr />";
+
+	$buzzwords = array("mindshare", "synergy", "space");
+
+	$talk = <<< talk
+	I'm certain that we could dominate mindshare in theis space with
+	our new product, establishing a true synergy between the marketing
+	and product developement teams. We'll own this space in three months.
+talk;
+
+	foreach ($buzzwords as $bw) {
+		echo "The word $bw appers " . substr_count($talk, $bw). " time(s).<br />";
+	}
 ?>
