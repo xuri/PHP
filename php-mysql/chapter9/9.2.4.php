@@ -17,10 +17,4 @@
 	$table = array("<b>" => "<strong>","</b>" => "</strong>");
 	$html = "<b>Today In PHP-Powerd News</b>";
 	echo strtr($html, $table);
-
-	echo "<hr />";
-
-	$input = "Email <a href='spammer@example.com'>sapmmer@example.com</a>
-			is <b>awesom</b>!";
-	echo strip_tags($input);
 ?>
