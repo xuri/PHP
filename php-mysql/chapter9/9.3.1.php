@@ -21,4 +21,9 @@
 summary;
 	$words = sizeof(explode(' ',strip_tags($summary)));
 	echo "Total words in summary: $words";
+
+	echo "<hr />";
+
+	$cities = array("Colimbus", "Akron", "Cleveland", "Cincinnati");
+	echo implode("|", $cities);
 ?>
