@@ -48,4 +48,21 @@ logfile;
 	$timestamp = substr($log,$pos,$pos2-$pos);
 
 	echo "The file $substr was first accessed on: $timestamp";
+
+
+	echo "<hr />";
+
+	// Limit $summary2 to how many characters?
+	$limit = 100;
+
+	$summary2 = <<< summary2
+	In the lastest installment of the ongoing Developer.com PHP series,
+	I discuss the many improvements and additions to
+	<a href="http://www.php.net">PHP 5's</a> object-oriented architecture.
+summary2;
+	
+	if (strlen($summary2) > $limit)
+		$summary2 = substr($summary2, 0, strrpos(substr($summary2, 0, $limit),
+			' ')) . '...';
+	echo $summary2;
 ?>
