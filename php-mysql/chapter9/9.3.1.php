@@ -95,4 +95,13 @@ talk;
 
 	$ccnumber = "1234567899991111";
 	echo substr_replace($ccnumber, "***************", 0, 12);
+
+	echo "<hr />";
+
+	echo str_pad("Salad", 10)." is good.";
+
+	echo "<hr />";
+
+	$header = "Log Report";
+	echo str_pad ($header, 20, "=+", STR_PAD_BOTH); 
 ?>
