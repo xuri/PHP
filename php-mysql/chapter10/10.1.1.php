@@ -6,10 +6,13 @@
 	printf ("Directory path: %s", dirname($path));
 
 	echo "<hr />";
-	
+
 	$pathinfo = pathinfo("/home/www/htdocs/book/chapter10/index.html");
 	printf("Dir name: %s <br />", $pathinfo[dirname]);
 	printf("Base name: %s <br />", $pathinfo[basename]);
 	printf("Extension: %s <br />", $pathinfo[extension]);
 
+	$imgpath = "../../images/cover.gif";
+	$absolutePath = realpath($imgpath);
+	// Return /www/htdocs/book/images/cober.gif
 ?>
