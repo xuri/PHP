@@ -1,7 +1,11 @@
 <?php
 	
-	// Read the file into an array
-	$users = file("users.txt");
+	// Read the file into a string variable
+	$userfile = file_get_contents("users.txt");
+
+	// Place each line of $userfile into array
+	$users = explode("\n", $userfile);
+	
 
 	// Cycle though the array
 	foreach ($users as $user) {
