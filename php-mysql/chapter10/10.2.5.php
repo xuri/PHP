@@ -19,4 +19,16 @@
 		// Output the formatted name and e-amil address
 		echo "<a href=\"mailto:$email\">$name</a> <br />";
 	}
+
+	echo "<hr />";
+
+	// Open the subscribers data file
+	$fh = fopen("/var/www/php/php-mysql/chapter10/subscribers.csv", "r");
+
+	// Break each line or the file into three parts
+	while (list($name, $email, $phone) = fgetcsv($fh, 1024, ",")) {
+
+		// Output the data in HTML format
+		printf("<p>%s (%s) Tel. %s</p>", $name, $email, $phone);
+	}
 ?>
