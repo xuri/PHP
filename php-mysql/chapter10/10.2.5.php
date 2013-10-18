@@ -33,4 +33,15 @@
 		// Output the data in HTML format
 		printf("<p>%s (%s) Tel. %s</p>", $name, $email, $phone);
 	}
+
+
+	echo "<hr />";
+
+	// Open a handle to users.txt
+	$fh = fopen("/var/www/php/php-mysql/chapter10/users.txt", "rt");
+	// While the EOF isn't reached, read in another line and output it
+	while (!feof($fh)) echo fgets($fh);
+
+	// Close the handle
+	fclose($fh);
 ?>
