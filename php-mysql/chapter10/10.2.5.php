@@ -22,11 +22,13 @@
 
 	echo "<hr />";
 
-	// Open the subscribers data file
-	$fh = fopen("/var/www/php/php-mysql/chapter10/subscribers.csv", "r");
+	// Read the file into an array
+	$users = file("/var/www/php/php-mysql/chapter10/subscribers.csv");
 
-	// Break each line or the file into three parts
-	while (list($name, $email, $phone) = fgetcsv($fh, 1024, ",")) {
+	foreach ($users as $user){
+
+		// Break each line of the file into three parts
+		list($name, $email, $phone) = explode(",", $user);
 
 		// Output the data in HTML format
 		printf("<p>%s (%s) Tel. %s</p>", $name, $email, $phone);
