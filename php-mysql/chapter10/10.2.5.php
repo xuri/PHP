@@ -65,4 +65,24 @@
 
 	// Close the handle
 	fclose($fh);
+
+	// fread()
+
+	$file = "/var/www/php/php-mysql/chapter10/users.txt";
+
+	// Open the file for reading
+	$fh = fopen($file, "rt");
+
+	// Read in the entire file
+	$userdata = fread($fh, filesize($file));
+
+	// Close the file handle
+	fclose($fh);
+
+	// readfile()
+
+	// Output the article to the browser.
+	$bytes = readfile($file);
+	
+
 ?>
