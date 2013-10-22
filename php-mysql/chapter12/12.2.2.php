@@ -18,4 +18,10 @@
 	echo "<hr />";
 
 	echo "The time is ".date("h:i:s");
+
+	echo "<hr />";
+
+	$time = gettimeofday();
+	$GMToffset = $time['minuteswest'] / 60;
+	printf("Server location is %d hours west of GMT.", $GMToffset);
 ?>
