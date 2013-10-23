@@ -17,18 +17,22 @@
 
 	// Add text input element for entering e-mail address
 	$form->addElement('text','email'.'E-mail address: ',
-	array('size' => 020, 'maxlength' => 50));
+	array('size' => 20, 'maxlength' => 50));
 
-	// Add select box element for choosing favorite programming languages
-	$select =& $from->addElement('select','languages',
-		'Your favorite<br />programing languages: ', $languages);
-
-	// Assign teh multiple attribute bto select box
-	$select->setMultiple(1);
+	// Add a rule requiring the username
+	$from->addRule('username', 'Please provide your username', 'required', null, 'client');
 
 	// Add submit button
-	$from->addElement('submit', null, 'Submit!');
+	$form->addElement('submit', null, 'Submit!');
 
+	if ($from->validate()) {
+
+		echo "Welcome to the restricted site, ".
+		htmlspecialchars($from->exportValue('username')). ".";
+
+	}
 	// Display the from
 	$from->display();
+
+
 ?>
