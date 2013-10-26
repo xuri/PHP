@@ -17,4 +17,11 @@
 
 	$result = dns_get_record("example.com");
 ?>
-<pre><?php	print_r($result); ?></pre>
+<pre><?php print_r($result); ?></pre>
+
+<?php
+
+	echo "<hr />";
+	getmxrr("wjgilmore.com", $mxhosts);
+	print_r($mxhosts);
+?>
