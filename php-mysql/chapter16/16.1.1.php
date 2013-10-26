@@ -12,4 +12,9 @@
 
 	if($valid) echo "The domain exists!";
 	else echo "Cannot locate MX record for $domain[1]!";
+
+	echo "<hr />";
+
+	$result = dns_get_record("example.com");
 ?>
+<pre><?php	print_r($result); ?></pre>
