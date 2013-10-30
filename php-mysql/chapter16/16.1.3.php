@@ -1,19 +1,22 @@
 <?php
-	// Establish a port 80 connection with www.example.com
-	$http = fsockopen("www.example.com",80);
+	// Five the script enough time to complete the task
+	ini_set("maxdb_execute_time", 120);
 
-	// Send a request to the server
-	$req = "GET / HTTP/1.1\r\n";
-	$req .= "Host: www.example.com\r\n";
-	$req .= "Connection: Close\r\n\r\n";
+	// Define scan range
+	$rangeStart = 0;
+	$rangeStop = 1024;
 
-	fputs($http, $req);
+	// Which server to scan?
+	$target = "www.example.com";
 
-	// Output the request result
-	while (!feof($http)) {
-		echo fgets($http, 1024);
+	// Build an array of port values
+	$range = range($rangeStart, $rangeStop);
+
+	echo "<p>Scan results for $target</p>";
+
+	// Execute rhe scan
+	foreach ($range as $port) {
+		$result = @fsockopen($target, $port, $errno,$errstr, 1);
+		if ($result) echo "<p>Socket open at port $port</p>";
 	}
-
-	// Close the conntction
-	fclose($http);
 ?>
