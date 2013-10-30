@@ -10,28 +10,35 @@
 	// Sender Address
 	$from = "bram@examle.com";
 
-
-	// CC Address
-	$cc = "marketing@example.com";
-
 	// Message Subject
-	$subject = "Thank you for your inquiry";
+	$subject = "Thank you for your inquiry - HTML Format";
 
 	// E-mail Body
-	$txt = <<<txt
-	This is the e-mail message.
-txt;
+	$html = <<< html
+	<html><body>
+	<h3>Example.com Stamp Company</h3>
+	<p>
+	Dear $name,<br />
+	Thank you for you interest in <b>Rxample.com's</b> fine selection of
+	number and a suggested date and time to chat.
+	</p>
 
-	// Identify the Relevent Mail Headers
+	<p>I look forward to hearing frome you.</p>
+
+	<p>
+	Sincerely,<br />
+	Bram Brownstein<br />
+	President, Example.com Stamp Supply
+html;
+
+	// Identify the Relevant Mail Headers
 	$headers['From']	= $from;
-	$headers['Cc'] = $subject;
 	$headers['Subject'] = $subject;
-
 	// Instantiate Mail_mime Class
 	$mimemail = new Mail_mime();
 
 	// Set HTML Message
-	$mimemail->setTxtBody($html);
+	$mimemail->setHTMLBody($html);
 
 	// Build Message
 	$mimemail = $mimemail->get();
@@ -42,6 +49,6 @@ txt;
 	// Create New Instance of Mail Class
 	$email =& Mail::factory('mail');
 
-	// Send the E-mail!
-	$email->send($recipient, $mailheaders, $message) or die("Can't send message!");
-?>	
+	// Send the E-mail Already!
+	$email->send($recipient, $mailheaders, $messages) or die("Can't send message!");
+
