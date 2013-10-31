@@ -51,4 +51,4 @@ html;
 
 	// Send the E-mail Already!
 	$email->send($recipient, $mailheaders, $messages) or die("Can't send message!");
-
+?>
