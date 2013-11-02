@@ -10,7 +10,7 @@
 	$articleid = mysqli_real_escape_string($_GET['id']);
 
 	// User wants to view an article, retrieve it from database
-	$query = "SELECT title, contect FROM articles WHERE id='$id";
+	$query = "SELECT title, contect FROM articles WHERE id='$id'";
 	$result = mysql_query($query);
 
 	// Retrieve query results
