@@ -9,10 +9,7 @@
 	$smarty->setCacheDir('/var/www/php/php-mysql/chapter19/smarty/cache');
 	$smarty->setConfigDir('/var/www/php/php-mysql/chapter19/smarty/configs');
 
-	// Assign two Smarty variables
-	$smarty->assign("name", "Jason Gilmore");
-	$smarty->assign("title", "Smary Rocks!");
-
-	$smarty->display('welcome.tpl');
+	$smarty->assign("title", "Snow Expected in Northeast.");
+	$smarty->display("article.tpl");
 
 ?>
