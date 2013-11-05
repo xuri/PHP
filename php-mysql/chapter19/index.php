@@ -10,7 +10,6 @@
 	$smarty->setConfigDir('/var/www/php/php-mysql/chapter19/smarty/configs');
 
 	$smarty->assign("title", "snow expected in northeast.");
-	$smarty->assign("body", "More than 12 inches of snow is expected to accumulate overnight in New York.");
-	$smarty->display("countwords.tpl")
-
+	$smarty->assign("filed", "1172345525");
+	$smarty->display("dateformat.tpl")
 ?>
