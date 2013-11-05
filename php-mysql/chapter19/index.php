@@ -9,7 +9,11 @@
 	$smarty->setCacheDir('/var/www/php/php-mysql/chapter19/smarty/cache');
 	$smarty->setConfigDir('/var/www/php/php-mysql/chapter19/smarty/configs');
 
-	$states = array("OH" => "Ohio", "CA" => "California", "NY" => "New York");
-	$smarty->assign("states", $states);
-	$smarty->display("states.tpl");
+	$titles = array(
+		"Pro PHP",
+		"Beginning Python",
+		"Pro MySQL"
+		);
+	$smarty->assign("titles", $titles);
+	$smarty->display("titles.tpl");
 ?>
