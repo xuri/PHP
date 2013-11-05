@@ -1,0 +1,1 @@
+<strong>{$title|strip_tags}</strong>

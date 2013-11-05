@@ -9,6 +9,6 @@
 	$smarty->setCacheDir('/var/www/php/php-mysql/chapter19/smarty/cache');
 	$smarty->setConfigDir('/var/www/php/php-mysql/chapter19/smarty/configs');
 
-	$smarty->assign("title", "snow expected in northeast.");
-	$smarty->display("default.tpl")
+	$smarty->assign("title", "Snow <strong>Expected</strong> in Northeast.");
+	$smarty->display("striptags.tpl")
 ?>
