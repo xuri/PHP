@@ -10,6 +10,5 @@
 	$smarty->setConfigDir('/var/www/php/php-mysql/chapter19/smarty/configs');
 
 	$smarty->assign("title", "snow expected in northeast.");
-	$smarty->assign("filed", "1172345525");
-	$smarty->display("dateformat.tpl")
+	$smarty->display("default.tpl")
 ?>
