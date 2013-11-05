@@ -9,7 +9,7 @@
 	$smarty->setCacheDir('/var/www/php/php-mysql/chapter19/smarty/cache');
 	$smarty->setConfigDir('/var/www/php/php-mysql/chapter19/smarty/configs');
 
-	$daysofweek = array("Mon.", "Tues.", "Weds.", "Thurs.", "Fri.", "Sat.", "Sun.");
-	$smarty->assign("daysofweek", $daysofweek);
-	$smarty->display("daysofweek.tpl");
+	$states = array("OH" => "Ohio", "CA" => "California", "NY" => "New York");
+	$smarty->assign("states", $states);
+	$smarty->display("states.tpl");
 ?>
