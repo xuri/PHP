@@ -9,12 +9,7 @@
 	$smarty->setCacheDir('/var/www/php/php-mysql/chapter19/smarty/cache');
 	$smarty->setConfigDir('/var/www/php/php-mysql/chapter19/smarty/configs');
 
-	$summaries = array (
-		"Snow expected in the Northeast over the weekend.",
-		"Sunny and warm weather in Havwaii.",
-		"Softball-sized hail reported in Wisconsin."
-		);
-
-	$smarty->assign("summaries", $summaries);
-	$smarty->display("truncate.tpl");
+	$daysofweek = array("Mon.", "Tues.", "Weds.", "Thurs.", "Fri.", "Sat.", "Sun.");
+	$smarty->assign("daysofweek", $daysofweek);
+	$smarty->display("daysofweek.tpl");
 ?>
