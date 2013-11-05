@@ -9,6 +9,12 @@
 	$smarty->setCacheDir('/var/www/php/php-mysql/chapter19/smarty/cache');
 	$smarty->setConfigDir('/var/www/php/php-mysql/chapter19/smarty/configs');
 
-	$smarty->assign("title", "Snow <strong>Expected</strong> in Northeast.");
-	$smarty->display("striptags.tpl")
+	$summaries = array (
+		"Snow expected in the Northeast over the weekend.",
+		"Sunny and warm weather in Havwaii.",
+		"Softball-sized hail reported in Wisconsin."
+		);
+
+	$smarty->assign("summaries", $summaries);
+	$smarty->display("truncate.tpl");
 ?>
