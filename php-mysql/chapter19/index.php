@@ -9,11 +9,17 @@
 	$smarty->setCacheDir('/var/www/php/php-mysql/chapter19/smarty/cache');
 	$smarty->setConfigDir('/var/www/php/php-mysql/chapter19/smarty/configs');
 
-	$titles = array(
-		"Pro PHP",
-		"Beginning Python",
-		"Pro MySQL"
+	// Creat the array
+	$titles[] = array(
+		"title" => "Pro PHP",
+		"author" => "Kevin McArthur",
+		"piblished" => "2008"
+		);
+	$titles[] = array(
+		"title" => "Beginning Python",
+		"author" => "Magnus Lie Hetland",
+		"piblished" => "2005"
 		);
 	$smarty->assign("titles", $titles);
-	$smarty->display("titles.tpl");
+	$smarty->display("section2.tpl");
 ?>
