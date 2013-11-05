@@ -9,7 +9,8 @@
 	$smarty->setCacheDir('/var/www/php/php-mysql/chapter19/smarty/cache');
 	$smarty->setConfigDir('/var/www/php/php-mysql/chapter19/smarty/configs');
 
-	$smarty->assign("title", "Snow Expected in Northeast.");
-	$smarty->display("article.tpl");
+	$smarty->assign("title", "snow expected in northeast.");
+	$smarty->assign("body", "More than 12 inches of snow is expected to accumulate overnight in New York.");
+	$smarty->display("countwords.tpl")
 
 ?>
