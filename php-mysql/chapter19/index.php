@@ -1,11 +1,12 @@
 <?php
 
 	// put full path to Smarty.class.php
+	date_default_timezone_set('Asia/Harbin');
 	require('/usr/local/lib/php/Smarty/Smarty.class.php');
 	$smarty = new Smarty();
 
 	$smarty->setTemplateDir('/Users/luxurioust/Sites/php/php-mysql/chapter19/smarty/templates');
-	$smarty->setCompileDir('/Users/luxurious/Sites/php/php-mysql/chapter19/smarty/templates_c');
+	$smarty->setCompileDir('/Users/luxurioust/Sites/php/php-mysql/chapter19/smarty/templates_c');
 	$smarty->setCacheDir('/Users/luxurioust/Sites/php/php-mysql/chapter19/smarty/cache');
 	$smarty->setConfigDir('/Users/luxurioust/Sites/php/php-mysql/chapter19/smarty/configs');
 
