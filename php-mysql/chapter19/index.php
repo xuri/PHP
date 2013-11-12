@@ -4,6 +4,10 @@
 	date_default_timezone_set('Asia/Harbin');
 	require('/usr/local/lib/php/Smarty/Smarty.class.php');
 	$smarty = new Smarty();
+	$smarty->caching = 1;
+
+	// Set the cache lifetime to 30 minutes.
+	$smarty->cache_lifetime = 1800;
 
 	$smarty->setTemplateDir('/Users/luxurioust/Sites/php/php-mysql/chapter19/smarty/templates');
 	$smarty->setCompileDir('/Users/luxurioust/Sites/php/php-mysql/chapter19/smarty/templates_c');
@@ -14,12 +18,12 @@
 	$titles[] = array(
 		"title" => "Pro PHP",
 		"author" => "Kevin McArthur",
-		"piblished" => "2008"
+		"published" => "2008"
 		);
 	$titles[] = array(
 		"title" => "Beginning Python",
 		"author" => "Magnus Lie Hetland",
-		"piblished" => "2005"
+		"published" => "2005"
 		);
 	$smarty->assign("titles", $titles);
 	$smarty->display("section2.tpl");
