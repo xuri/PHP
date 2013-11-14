@@ -3,4 +3,8 @@
 	foreach($xml->book as $book) {
 		printf("%s is %s.<br />", $book->author, $book->author->attributes());
 	}
+
+	echo "<hr />";
+
+	echo $xml->book[2]->author->attributes();
 ?>
