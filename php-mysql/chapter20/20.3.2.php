@@ -10,4 +10,9 @@
 	foreach ($authors AS $author) {
 		echo "$author<br />";
 	}
+
+	echo "<hr />";
+
+	$book = $xml->xpath("/library/book[author='Ernest Hemingway']");
+	echo $book[0]->title;
 ?>
