@@ -14,5 +14,10 @@
 		<title>The Sun Also Rises</title>
 		<author gender="male">Ernest Hemingway</author>
 		<description>The masterpiece that launched Hemingway's career.</description>
+		<cast>
+			<character>Jake Barnes</character>
+			<character>Lady Brett Ashley</character>
+			<character>Mike Campbell</character>
+		</cast>
 	</book>
 </library>

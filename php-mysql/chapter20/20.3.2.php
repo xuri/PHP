@@ -1,4 +1,13 @@
 <?php
 	$xml = simplexml_load_file("books.xml");
-	echo htmlspecialchars($xml->asXML());
+	foreach($xml->book[2]->cast->children() AS $character) {
+		echo "$character<br />";
+	}
+
+	echo "<hr />";
+
+	$authors = $xml->xpath("/library/book/author");
+	foreach ($authors AS $author) {
+		echo "$author<br />";
+	}
 ?>
